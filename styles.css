@@ -1,0 +1,114 @@
+
+.hover-button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.2s ease-in-out;
+}
+
+.hover-button:hover {
+  background-color: #2ecc71; /* Green */
+  transform: scale(1.1);   /* Slight zoom-in */
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    margin: 4rem;
+    background-color: #130ff1;
+    border-radius: 50%;
+    position: relative;
+    animation: bounce 2s ease infinite;
+    cursor: pointer;
+  }
+  .ball:hover {
+    background-color: #f1c40f; /* Yellow */
+    animation: bounce 0.5s ease infinite;
+    transform: scale(1.2); /* Slight zoom-in */
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+  }
+
+  .spinner {
+    width: 100px;
+    height: 100px;
+    margin: -13rem auto;
+    border: 10px solid #e74c3c;
+    border-top: 10px solid #3498db;
+    border-left: 10px solid #2ecc71;
+    border-right: 10px solid #f1c40f;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite, grow-shrink 3s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes grow-shrink {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+
+  .animated-box {
+    width: 100px;
+    height: 100px;
+    margin: 5.5rem auto;
+    background-color: #9b59b6;
+    transition: transform 0.3s ease;
+  }
+  
+  .animated-box:hover {
+    animation: color-change 1s ease infinite;
+    transform: rotate(20deg);
+  }
+  
+  @keyframes color-change {
+    0% { background-color: #9b59b6; }
+    50% { background-color: #2ecc71; }
+    100% { background-color: #9b59b6; }
+  }
+
+  /* Js and animation */
+
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #db349b;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#animateBtn {
+  background-color: #089041;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* transition: background-color 0.4s ease, transform 0.2s ease-in-out; */
+}
+
+.box.animate {
+  opacity: 1;
+  animation: moveRight 2s ease-in-out forwards;
+}
+
+@keyframes moveRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(800px); }
+}
